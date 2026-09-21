@@ -1,0 +1,383 @@
+{
+  "date": "2026-09-21",
+  "command": "bun run examples",
+  "inputLanguage": "en",
+  "note": "Local Next.js API routes calling Vercel AI Gateway with English questions and synthetic repository samples. One observed run, not an accuracy benchmark.",
+  "results": [
+    {
+      "example": "boolean",
+      "sample": "Refund request",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.98
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 336,
+        "outputTokens": 23,
+        "totalTokens": 359
+      },
+      "durationMs": 653
+    },
+    {
+      "example": "boolean",
+      "sample": "General inquiry",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.02
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 339,
+        "outputTokens": 23,
+        "totalTokens": 362
+      },
+      "durationMs": 333
+    },
+    {
+      "example": "boolean",
+      "sample": "Ambiguous wording",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.14
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 334,
+        "outputTokens": 23,
+        "totalTokens": 357
+      },
+      "durationMs": 544
+    },
+    {
+      "example": "choice",
+      "sample": "Billing",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "billing",
+          "probabilities": {
+            "review": 0,
+            "billing": 1,
+            "technical": 0,
+            "account": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 395,
+        "outputTokens": 45,
+        "totalTokens": 440
+      },
+      "durationMs": 330
+    },
+    {
+      "example": "choice",
+      "sample": "Technical support",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "technical",
+          "probabilities": {
+            "billing": 0,
+            "technical": 0.99,
+            "account": 0,
+            "review": 0.01
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 397,
+        "outputTokens": 45,
+        "totalTokens": 442
+      },
+      "durationMs": 375
+    },
+    {
+      "example": "choice",
+      "sample": "Account",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "account",
+          "probabilities": {
+            "account": 1,
+            "technical": 0,
+            "review": 0,
+            "billing": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 394,
+        "outputTokens": 45,
+        "totalTokens": 439
+      },
+      "durationMs": 356
+    },
+    {
+      "example": "choice",
+      "sample": "Insufficient information",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "department": {
+          "type": "choice",
+          "choice": "review",
+          "probabilities": {
+            "billing": 0,
+            "review": 1,
+            "technical": 0,
+            "account": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 383,
+        "outputTokens": 45,
+        "totalTokens": 428
+      },
+      "durationMs": 310
+    },
+    {
+      "example": "score",
+      "sample": "Cosmetic issue",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "severity": {
+          "type": "score",
+          "score": 0,
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0,
+            "3": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 388,
+        "outputTokens": 17,
+        "totalTokens": 405
+      },
+      "durationMs": 483
+    },
+    {
+      "example": "score",
+      "sample": "Workaround available",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "severity": {
+          "type": "score",
+          "score": 0.99,
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.99,
+            "2": 0,
+            "3": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 388,
+        "outputTokens": 17,
+        "totalTokens": 405
+      },
+      "durationMs": 330
+    },
+    {
+      "example": "score",
+      "sample": "Full outage",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "severity": {
+          "type": "score",
+          "score": 3,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 387,
+        "outputTokens": 17,
+        "totalTokens": 404
+      },
+      "durationMs": 363
+    },
+    {
+      "example": "mixed",
+      "sample": "Object state",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.99
+        },
+        "department": {
+          "type": "choice",
+          "choice": "billing",
+          "probabilities": {
+            "review": 0,
+            "account": 0,
+            "billing": 1,
+            "technical": 0
+          }
+        },
+        "severity": {
+          "type": "score",
+          "score": 2,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1,
+            "3": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 601,
+        "outputTokens": 78,
+        "totalTokens": 679
+      },
+      "durationMs": 369
+    },
+    {
+      "example": "mixed",
+      "sample": "Conversation array",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.01
+        },
+        "department": {
+          "type": "choice",
+          "choice": "technical",
+          "probabilities": {
+            "technical": 0.96,
+            "billing": 0,
+            "account": 0,
+            "review": 0.04
+          }
+        },
+        "severity": {
+          "type": "score",
+          "score": 0.98,
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.97,
+            "2": 0,
+            "3": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 628,
+        "outputTokens": 78,
+        "totalTokens": 706
+      },
+      "durationMs": 377
+    },
+    {
+      "example": "mixed",
+      "sample": "String state",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "requestsRefund": {
+          "type": "boolean",
+          "probability": 0.01
+        },
+        "department": {
+          "type": "choice",
+          "choice": "account",
+          "probabilities": {
+            "account": 1,
+            "review": 0,
+            "technical": 0,
+            "billing": 0
+          }
+        },
+        "severity": {
+          "type": "score",
+          "score": 0.01,
+          "probabilities": {
+            "0": 0.99,
+            "1": 0.01,
+            "2": 0,
+            "3": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 568,
+        "outputTokens": 78,
+        "totalTokens": 646
+      },
+      "durationMs": 387
+    }
+  ]
+}
