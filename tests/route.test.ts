@@ -106,6 +106,34 @@ test("accepts structured state without converting arrays into batches", async ()
   expect(evaluate.mock.calls[0][0].questions).toEqual(examples.mixed.questions);
 });
 
+test("cities forwards the description with the fixed livability rubric", async () => {
+  const state = examples.cities.samples[0].state;
+  const cityResult: JevResult = {
+    ...fixture,
+    answers: {
+      livability: {
+        type: "score",
+        score: 3.25,
+        probabilities: { "0": 0, "1": 0, "2": 0, "3": 0.75, "4": 0.25 },
+      },
+    },
+  };
+  const evaluate = mock<(input: EvaluateInput) => Promise<JevResult>>(
+    async () => cityResult,
+  );
+  const response = await callRoute(request({ state }), "cities", evaluate);
+  expect(response.status).toBe(200);
+  expect(evaluate).toHaveBeenCalledTimes(1);
+  expect(evaluate.mock.calls[0][0].state).toEqual(state);
+  expect(evaluate.mock.calls[0][0].questions).toEqual(
+    examples.cities.questions,
+  );
+  expect(await response.json()).toEqual({
+    example: "cities",
+    ...JSON.parse(JSON.stringify(cityResult)),
+  });
+});
+
 test("rejects malformed JSON and non-JSON requests", async () => {
   const evaluate = mock(async () => fixture);
   const malformed = new Request("http://localhost", {

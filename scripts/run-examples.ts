@@ -10,7 +10,9 @@ let selectedExampleIds = exampleIds;
 
 if (requested !== "all") {
   if (!isExampleId(requested)) {
-    console.error("Usage: bun run examples [boolean|choice|score|mixed|all]");
+    console.error(
+      "Usage: bun run examples [boolean|choice|score|mixed|cities|all]",
+    );
     process.exit(1);
   }
 
