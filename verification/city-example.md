@@ -1,0 +1,30 @@
+# Korean city scoring example
+
+Run `bun dev`, then `bun run examples cities`. The runner sends one English city description per request to `POST /api/example/cities`. The response includes `answers.livability.score` and probabilities for levels 0–4; scores may be fractional.
+
+The samples cover Seoul, Busan, Daegu, Incheon, Gwangju, Daejeon, Ulsan, Sejong, Changwon, and Cheongju. This is a selected set of urban examples, not a complete or authoritative administrative register. Changwon and Cheongju illustrate municipal mergers; “integrated city” is not treated as a separate province-level classification.
+
+The rubric weighs transport, work opportunities, everyday amenities, and nature or culture equally. Levels range from very poor fit (0) to very good fit (4), with mixed or insufficient evidence at level 2. Only the supplied description is evaluated. Missing details are unknown, not evidence of a benefit or a problem.
+
+Descriptions are short summaries of public sources, with uneven coverage of these priorities. Scores demonstrate model behavior and depend on wording; they are not official livability rankings, relocation advice, or a benchmark of real city quality. No housing costs, safety ratings, or precise service-quality comparisons are asserted.
+
+The [recorded run](./2026-09-22-cities.json) includes the rubric, input descriptions, and actual Gateway responses for all 10 cities.
+
+## Description sources
+
+Checked on September 22, 2026. The summaries use existing features and historical events, not announced construction as completed infrastructure.
+
+Changwon's infrastructure summary also draws on city reports about the [industrial areas and Machang Bridge](https://www.changwon.go.kr/cwportal/10310/10429/10432.web?amode=view&cpage=3326&gcode=1011&idx=344657) and [Jinhae Marine Park](https://www.changwon.go.kr/cwportal/10310/10429/10432.web?amode=view&cpage=35&gcode=1011&idx=850513).
+
+| City     | Sources                                                                                                                                                                                                                                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Seoul    | [City tourist guide: transit, markets, cultural venues, and parks](https://english.seoul.go.kr/wp-content/uploads/2025/01/2025-Tourist-guidebookENG.pdf)                                                                                                                                                                                     |
+| Busan    | [City environment](https://www.busan.go.kr/eng/city-environment), [public transport](https://www.busan.go.kr/eng/public-transportation), [coastal route and cultural village](https://www.busan.go.kr/galmaetgil_eng/tour0401)                                                                                                               |
+| Daegu    | [Textile research and bus access](https://www.daegu.go.kr/english/?menu_id=00000832), [industrial areas](https://www.daegu.go.kr/eco/index.do?menu_id=00001148)                                                                                                                                                                              |
+| Incheon  | [Airport and Songdo business tourism](https://www.incheon.go.kr/en/EN020401/3067555), [urban history museum and transport](https://www.incheon.go.kr/museum/MU050601), [Central Park and convention facilities](https://www.incheon.go.kr/en/EN030115/view?contentid=1002301&curPage=4)                                                      |
+| Gwangju  | [Cultural industry](https://www.gwangju.go.kr/eng/contentsView.do?pageId=eng45), [Mudeungsan](https://www.gwangju.go.kr/eng/contentsView.do?pageId=eng16), [Mudeung Market](https://tour.gwangju.go.kr/eng/tour/info/shopping/002.cs?act=view&category=002&guNm=&infoId=341&pageIndex=1&searchCondition=&searchKeyword=)                     |
+| Daejeon  | [KAIST city overview](https://gcc.kaist.ac.kr/Upl/_board/comm_0303_en/comm_0303_en_2_1599655694.pdf), [National Science Museum](https://www.science.go.kr/eps/cntnts/1172/moveCntnts.do)                                                                                                                                                     |
+| Ulsan    | [Industry and urban green spaces](https://ulsan.go.kr/u/english/contents.ulsan?mId=001001002002000000)                                                                                                                                                                                                                                       |
+| Sejong   | [Administrative district and cultural development](https://www.korea.net/NewsFocus/policies/view?articleId=290773), [BRT](https://www.korea.net/NewsFocus/Korea_in_photos/view?articleId=226490), [Korea Tourism Organization guide](https://english.visitkorea.or.kr/public/internal/ShoppingSpecial/files/musthaveitems_ebook_english.pdf) |
+| Changwon | [Merger and district development](https://www.changwon.go.kr/cwportal/10310/10429/10432.web?amode=view&cpage=3434&gcode=1011&idx=342370)                                                                                                                                                                                                     |
+| Cheongju | [Merger history](https://www.cheongju.go.kr/www/contents.do?key=544), [transport and science complexes](https://www.cheongju.go.kr/english/contents.do?key=740), [Jikji Festival](https://www.cheongju.go.kr/etour/selectTurCntntsView.do?clturCntntsCode=9&clturCntntsNo=506&key=13068)                                                     |

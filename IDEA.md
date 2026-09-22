@@ -18,8 +18,9 @@ The project is API-only. Each example accepts a state at `POST /api/example/{exa
 - `choice`: select the department that should handle a request.
 - `score`: assess an issue's severity against a rubric.
 - `mixed`: evaluate all three question types in one request.
+- `cities`: score the livability suggested by English descriptions of 10 Korean cities on a 0–4 scale.
 
-The 13 English samples cover string, object, and array inputs. Run them sequentially with `bun run examples` to inspect answers, probability distributions, token usage, and SDK call duration.
+The 23 English samples cover string, object, and array inputs. Run them sequentially with `bun run examples` to inspect answers, probability distributions, token usage, and SDK call duration. Use `bun run examples cities` for the city samples only. City scores assess the supplied descriptions, not an official ranking; see the [scope and sources](./verification/city-example.md).
 
 Keep HTTP handling in `src/app/api/example/[example]/route.ts`, questions and samples in the adjacent `examples.ts`, and Gateway communication in `src/lib/jev.ts`.
 

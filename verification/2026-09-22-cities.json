@@ -1,0 +1,341 @@
+{
+  "date": "2026-09-22",
+  "command": "bun run examples cities",
+  "inputLanguage": "en",
+  "note": "One live Gateway run using English city summaries and a shared livability rubric. Scores assess the descriptions, not actual city rankings.",
+  "questions": {
+    "livability": {
+      "type": "score",
+      "instructions": "How good a place to live does the supplied city description suggest for a resident who values transport, work opportunities, everyday amenities, and access to nature or culture equally? Evaluate only the description, not the city's reputation or your outside knowledge. Treat missing information as unknown, not as a benefit or a problem. Do not invent housing costs, safety levels, or service quality. This is an illustrative assessment of a short description, not an official city ranking.",
+      "criteria": [
+        "Very poor fit: the description shows severe barriers to everyday life with few compensating benefits",
+        "Poor fit: the described drawbacks outweigh the practical benefits",
+        "Mixed or unclear fit: benefits and drawbacks are balanced, or there is too little evidence for a strong judgment",
+        "Good fit: the description provides concrete benefits across several priorities, with no stated major barrier",
+        "Very good fit: the description provides strong, concrete benefits across all four priorities, with no stated major barrier"
+      ]
+    }
+  },
+  "results": [
+    {
+      "state": {
+        "city": "Seoul",
+        "description": "Seoul is South Korea's capital. Subway connections link neighborhoods with markets, museums, and cultural venues. Hangang parks and Seoul Forest provide places for walking, cycling, and outdoor recreation within the city."
+      },
+      "example": "cities",
+      "sample": "Seoul",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.79,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.24,
+            "3": 0.73,
+            "4": 0.03
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 533,
+        "outputTokens": 19,
+        "totalTokens": 552
+      },
+      "durationMs": 1070
+    },
+    {
+      "state": {
+        "city": "Busan",
+        "description": "Busan is a coastal port city in southeastern South Korea. Its metro, buses, and rail connections serve urban travel. Beaches, coastal walking routes, markets, and cultural neighborhoods offer a range of leisure activities alongside the port economy."
+      },
+      "example": "cities",
+      "sample": "Busan",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 3.44,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.03,
+            "3": 0.5,
+            "4": 0.47
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 539,
+        "outputTokens": 19,
+        "totalTokens": 558
+      },
+      "durationMs": 400
+    },
+    {
+      "state": {
+        "city": "Daegu",
+        "description": "Daegu is an inland city with a textile industry and textile research institutions. Industrial areas include Seongseo and Daegu Technopolis. City buses connect destinations including research facilities, supporting travel between parts of the city."
+      },
+      "example": "cities",
+      "sample": "Daegu",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.06,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.94,
+            "3": 0.06,
+            "4": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 536,
+        "outputTokens": 19,
+        "totalTokens": 555
+      },
+      "durationMs": 495
+    },
+    {
+      "state": {
+        "city": "Incheon",
+        "description": "Incheon is home to an international airport and the Songdo business and convention district. Subway and bus services connect destinations such as the Incheon Urban History Museum. Songdo Central Park provides walking paths, water activities, and cultural attractions near shopping and exhibition facilities."
+      },
+      "example": "cities",
+      "sample": "Incheon",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 3.71,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.01,
+            "3": 0.27,
+            "4": 0.72
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 547,
+        "outputTokens": 19,
+        "totalTokens": 566
+      },
+      "durationMs": 625
+    },
+    {
+      "state": {
+        "city": "Gwangju",
+        "description": "Gwangju is a southwestern city with a cultural industry and programs centered on arts and local history. Mudeungsan provides mountain scenery and walking destinations. Neighborhood markets, including Mudeung Market, combine everyday shopping with local cultural activities."
+      },
+      "example": "cities",
+      "sample": "Gwangju",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.48,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.52,
+            "3": 0.48,
+            "4": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 541,
+        "outputTokens": 19,
+        "totalTokens": 560
+      },
+      "durationMs": 370
+    },
+    {
+      "state": {
+        "city": "Daejeon",
+        "description": "Daejeon is a science and research city in central South Korea, home to KAIST and the Daedeok research area. Railway and expressway connections make it a transport hub. The National Science Museum offers exhibitions and educational activities in the city."
+      },
+      "example": "cities",
+      "sample": "Daejeon",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.49,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.51,
+            "3": 0.49,
+            "4": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 546,
+        "outputTokens": 19,
+        "totalTokens": 565
+      },
+      "durationMs": 359
+    },
+    {
+      "state": {
+        "city": "Ulsan",
+        "description": "Ulsan has an industrial economy centered on automotive manufacturing, shipbuilding, and petrochemicals. Taehwagang National Garden, Baengnidae Forest, and Ulsan Grand Park provide green spaces and outdoor recreation alongside the city's industrial areas."
+      },
+      "example": "cities",
+      "sample": "Ulsan",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.26,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.74,
+            "3": 0.26,
+            "4": 0
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 549,
+        "outputTokens": 19,
+        "totalTokens": 568
+      },
+      "durationMs": 380
+    },
+    {
+      "state": {
+        "city": "Sejong",
+        "description": "Sejong is a special self-governing city with a planned administrative district and central government offices. Bus rapid transit serves the government complex area. Sejong Lake Park and the National Sejong Arboretum provide outdoor spaces, while the city is expanding its cultural facilities."
+      },
+      "example": "cities",
+      "sample": "Sejong",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.61,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.4,
+            "3": 0.58,
+            "4": 0.02
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 546,
+        "outputTokens": 19,
+        "totalTokens": 565
+      },
+      "durationMs": 388
+    },
+    {
+      "state": {
+        "city": "Changwon",
+        "description": "Changwon was formed by merging Changwon, Masan, and Jinhae in 2010. Its economy includes the Changwon National Industrial Complex and Masan Free Trade Zone. Machang Bridge links the Masan and Changwon areas, while Jinhae Marine Park provides a coastal recreation destination."
+      },
+      "example": "cities",
+      "sample": "Changwon",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 2.69,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.33,
+            "3": 0.65,
+            "4": 0.02
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 555,
+        "outputTokens": 19,
+        "totalTokens": 574
+      },
+      "durationMs": 427
+    },
+    {
+      "state": {
+        "city": "Cheongju",
+        "description": "Cheongju merged with Cheongwon County in 2014, bringing urban and surrounding rural areas into one city. It includes the Osong life-science and Ochang science complexes, Cheongju International Airport, and Osong KTX station. The Jikji Festival provides cultural activities linked to the city's printing heritage."
+      },
+      "example": "cities",
+      "sample": "Cheongju",
+      "model": "typesafe-ai/jev",
+      "answers": {
+        "livability": {
+          "type": "score",
+          "score": 3.02,
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0.11,
+            "3": 0.76,
+            "4": 0.13
+          }
+        }
+      },
+      "rounding": {
+        "probabilityDecimals": 2,
+        "scoreDecimals": 2
+      },
+      "usage": {
+        "inputTokens": 563,
+        "outputTokens": 19,
+        "totalTokens": 582
+      },
+      "durationMs": 505
+    }
+  ]
+}
